@@ -1,0 +1,35 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663663725732/Wdk2VuHBktKtP2QqV63FoA",
+    "access_key_id": "ASIAZV3A2ECZAV3KIVZW",
+    "secret_access_key": "Wa2EwDB/9/K8qh+DicvElx1WO6s8sPGHnYr6pzTf",
+    "session_token": "IQoJb3JpZ2luX2VjELH//////////wEaCXVzLWVhc3QtMSJIMEYCIQDV8ttwg3K27S6+dscImvDdbiS2j3jXlJL8zzjo40kzSQIhAL9g3evfwmGya/JaZwpqsedn4HpJ1tGavAZC7d9X+e1JKvUDCHoQBBoMNjY1Mzg2MDk4ODY2Igxm2SsCMDoOCpvrSEkq0gNU+0DysYTqjne24MoiiWh2x0QfLiaU6VyKr7u1bHIPWV7CJow6jvJvdPBiWNfCpsEjRkJhpK6QnrVOiOdhsIQbKeShdn4MWtS3opobHIO7D7o8xuKv+9jadoBVrC9OXQSX1Ix8o6npFPVHc0Iq4Aix5Z83C++gLmsis3CyqnYGx0JWrBu9tfdZnir4sEK/5k/DOCvImP56jurSeYhotn/py/s27j1fi6R+Qqrzu7KujOXuiKNu4AorrYW6IIz2fjWg7dxkLVVDFzEQabSbs6WXDZqYWhs7PJcAY5CCaxxP6g7mNC6Qub5EX2lMz9Q+eT0wZV1oVHh3PAvua0M15qIOSDT97xnpm26S/0f6CDEdQ6zcXAftvLA08bfPNcp9EI/mdBbLkdUA4L/2ejkhY9hDm5/0cnXZrYA+0pja0epzooneaJDHntjFbejJaLz44H2s4lrhINTRVxemj1oFXUlpXLIW+YzvX+OpegT73Kk80clmA9MjHRRPJ4+kkQY3LGKam2TNrZP7QZlOuqdO39uUk2+hAXvv5RLGRC5uflLAY59eDkAmNE69fslgMMyvOu7W8zc0In29y2YaA/sSW8/q0mFcpmKHWi9RDu6dnECz4j+3MLqWndAGOpwBT5vzVndG/ivZ2MhQvk+rkZbjl92BrM4UB2TlU8EX5eaw4ZznExvwpXuUyGSVt1XTqkCj8dHCnSM5iN+DrjtLk8VyA2ves2fr/N8vXsS/CHsvHvGEPR8iEkr/atFZ9J2PLBfAZF/GI9ULuSwQ73li4otQYQh90/5vwdODEA2HLpiixqkCIvnvYzalVkxfLZdyC1iToc4q7m8R3CPl",
+    "expiration": "2026-05-16T04:35:06.000Z"
+  },
+  "name": "nya-website",
+  "path": "/home/ubuntu/nya-website",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "YSyv4WnGEf8oB8QTMwJGrU",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "imxZyAbAji3KWLiFuoP9Kn",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Amos Kipkoech",
+    "OWNER_OPEN_ID": "Ksr5TUwGeZSxBHZd9Y7Kv3",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "5b8b8f82-6262-4f4e-b183-28d56e37bf9d",
+    "VITE_APP_ID": "Wdk2VuHBktKtP2QqV63FoA",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "Nandi Youth Assembly",
+    "VITE_FRONTEND_FORGE_API_KEY": "XFVUhWP2ECk23Zf9Pqj7qR",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
