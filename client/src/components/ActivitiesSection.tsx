@@ -7,11 +7,11 @@ import { useEffect, useRef, useState } from "react";
 import { Heart, BookOpen, Crown, ArrowRight } from "lucide-react";
 
 const MENTORSHIP_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663663725732/Wdk2VuHBktKtP2QqV63FoA/nya-mentorship-QTrkzqkeNLSebLvwGeDHn2.webp";
+  "/manus-storage/extracted_image_2_759fd824.png";
 const LEADERSHIP_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663663725732/Wdk2VuHBktKtP2QqV63FoA/nya-leadership-asyBrJMt7GVw6DvzGdRMzS.webp";
+  "/manus-storage/extracted_image_3_43a49aae.png";
 const COMMUNITY_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663663725732/Wdk2VuHBktKtP2QqV63FoA/nya-community-bZqLxuRic8r3wZJqswRpkF.webp";
+  "/manus-storage/extracted_image_5_d9cc9620.png";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
