@@ -33,12 +33,20 @@ export default function HeroSection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${HERO_IMAGE})` }}
       />
-      {/* Gradient overlay — dark teal */}
+      {/* Gradient overlay — lighter with radial focus */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, oklch(0.12 0.06 195 / 0.75) 0%, oklch(0.18 0.08 195 / 0.85) 60%, oklch(0.12 0.06 195 / 0.95) 100%)",
+            "linear-gradient(135deg, oklch(0.20 0.08 195 / 0.55) 0%, oklch(0.25 0.09 195 / 0.65) 50%, oklch(0.18 0.07 195 / 0.75) 100%)",
+        }}
+      />
+      {/* Additional subtle vignette for text readability */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at center, transparent 0%, oklch(0.15 0.06 195 / 0.4) 100%)",
         }}
       />
 
@@ -70,25 +78,30 @@ export default function HeroSection() {
           style={{
             fontFamily: "'Space Grotesk', sans-serif",
             fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
+            color: "white",
+            textShadow: "0 2px 16px oklch(0.12 0.005 285 / 0.6), 0 0 40px oklch(0.38 0.09 195 / 0.3)",
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(24px)",
             transition: "opacity 0.6s ease-out 0.1s, transform 0.6s ease-out 0.1s",
+            letterSpacing: "-0.02em",
           }}
         >
           Nandi Youth
           <br />
-          <span style={{ color: "oklch(0.88 0.12 75)" }}>Assembly</span>
+          <span style={{ color: "oklch(0.88 0.12 75)", textShadow: "0 2px 12px oklch(0.12 0.005 285 / 0.5)" }}>Assembly</span>
         </h1>
 
         {/* Tagline */}
         <p
-          className="text-xl md:text-2xl font-semibold mb-4 tracking-wide"
+          className="text-xl md:text-2xl font-bold mb-4 tracking-wide"
           style={{
             fontFamily: "'Space Grotesk', sans-serif",
             color: "oklch(0.88 0.12 75)",
+            textShadow: "0 1px 8px oklch(0.12 0.005 285 / 0.4)",
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(24px)",
             transition: "opacity 0.6s ease-out 0.2s, transform 0.6s ease-out 0.2s",
+            letterSpacing: "-0.01em",
           }}
         >
           Uniting Voices, Driving Impact.
@@ -96,9 +109,11 @@ export default function HeroSection() {
 
         {/* Description */}
         <p
-          className="max-w-2xl mx-auto text-base md:text-lg text-white/80 mb-10 leading-relaxed"
+          className="max-w-2xl mx-auto text-base md:text-lg mb-10 leading-relaxed font-medium"
           style={{
             fontFamily: "'Nunito', sans-serif",
+            color: "white",
+            textShadow: "0 1px 6px oklch(0.12 0.005 285 / 0.5)",
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(24px)",
             transition: "opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s",
