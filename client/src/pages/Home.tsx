@@ -11,6 +11,7 @@ import ProgramsSection from "@/components/ProgramsSection";
 import FocusSection from "@/components/FocusSection";
 import ImpactBanner from "@/components/ImpactBanner";
 import ActivitiesSection from "@/components/ActivitiesSection";
+import LeadershipSection from "@/components/LeadershipSection";
 import CallToAction from "@/components/CallToAction";
 import ContactSection from "@/components/ContactSection";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <LeadershipSection />
       <ImpactBanner />
       <ProgramsSection />
       <FocusSection />
