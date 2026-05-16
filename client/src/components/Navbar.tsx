@@ -51,12 +51,11 @@ export default function Navbar() {
           onClick={() => handleNavClick("#home")}
           className="flex items-center gap-3 group"
         >
-          <div
-            className="w-9 h-9 rounded-lg flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
-            style={{ background: "oklch(0.75 0.16 75)", fontFamily: "'Space Grotesk', sans-serif" }}
-          >
-            NYA
-          </div>
+          <img
+            src="/manus-storage/extracted_image_22_306270a4.png"
+            alt="Nandi Youth Assembly Logo"
+            className="w-10 h-10 flex-shrink-0 hover:scale-105 transition-transform duration-200"
+          />
           <div className="flex flex-col leading-tight">
             <span
               className="text-white font-bold text-base"
