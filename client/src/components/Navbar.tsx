@@ -1,7 +1,6 @@
 /**
- * NYA Navbar — Civic Energy Design
- * Sticky top nav with teal background, amber accent on active links
- * Space Grotesk for brand name, smooth mobile drawer
+ * NYA Navbar — NSA-style clean navigation
+ * Logo on left, horizontal menu, minimal styling
  */
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -11,7 +10,6 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Leadership", href: "#leadership" },
   { label: "Programs", href: "#programs" },
-  { label: "Focus Areas", href: "#focus" },
   { label: "Activities", href: "#activities" },
   { label: "Contact", href: "#contact" },
 ];
@@ -21,9 +19,11 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handler, { passive: true });
-    return () => window.removeEventListener("scroll", handler);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (href: string) => {
@@ -38,11 +38,8 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled
-          ? "oklch(0.28 0.08 195 / 0.97)"
-          : "oklch(0.28 0.08 195 / 0.92)",
-        backdropFilter: "blur(12px)",
-        boxShadow: scrolled ? "0 4px 24px oklch(0.12 0.005 285 / 0.25)" : "none",
+        background: scrolled ? "white" : "white",
+        boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.1)" : "none",
       }}
     >
       <div className="container flex items-center justify-between h-16">
@@ -53,87 +50,91 @@ export default function Navbar() {
         >
           <img
             src="/manus-storage/extracted_image_22_306270a4.png"
-            alt="Nandi Youth Assembly Logo"
-            className="w-10 h-10 flex-shrink-0 hover:scale-105 transition-transform duration-200"
+            alt="NYA Logo"
+            className="w-10 h-10 flex-shrink-0"
           />
-          <div className="flex flex-col leading-tight">
+          <div className="flex flex-col leading-tight hidden sm:flex">
             <span
-              className="text-white font-bold text-base"
+              className="text-gray-900 font-bold text-sm"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
-              Nandi Youth Assembly
+              NYA
             </span>
             <span
-              className="text-xs hidden sm:block"
-              style={{ color: "oklch(0.75 0.16 75)", fontFamily: "'Nunito', sans-serif" }}
+              className="text-xs text-gray-600"
+              style={{ fontFamily: "'Nunito', sans-serif" }}
             >
-              Uniting Voices, Driving Impact
+              Nandi Youth Assembly
             </span>
           </div>
         </button>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
-          {navLinks.map((link) => (
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map(({ label, href }) => (
             <button
-              key={link.href}
-              onClick={() => handleNavClick(link.href)}
-              className="relative px-4 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 group"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              key={label}
+              onClick={() => handleNavClick(href)}
+              className="text-sm font-semibold transition-colors hover:text-blue-600"
+              style={{
+                color: "oklch(0.38 0.09 195)",
+                fontFamily: "'Space Grotesk', sans-serif",
+              }}
             >
-              {link.label}
-              <span
-                className="absolute bottom-0 left-4 right-4 h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left rounded-full"
-                style={{ background: "oklch(0.75 0.16 75)" }}
-              />
+              {label}
             </button>
           ))}
-          <button
-            onClick={() => handleNavClick("#contact")}
-            className="ml-3 px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 btn-scale"
-            style={{
-              background: "oklch(0.75 0.16 75)",
-              color: "oklch(0.12 0.005 285)",
-              fontFamily: "'Space Grotesk', sans-serif",
-            }}
-          >
-            Join NYA
-          </button>
         </nav>
 
-        {/* Mobile Toggle */}
+        {/* CTA Button */}
         <button
-          className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+          className="hidden md:block px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-200 hover:brightness-110"
+          style={{
+            background: "oklch(0.75 0.16 75)",
+            color: "white",
+            fontFamily: "'Space Grotesk', sans-serif",
+          }}
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          Join NYA
+        </button>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden p-2"
+          style={{ color: "oklch(0.38 0.09 195)" }}
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu */}
       {open && (
-        <div
-          className="md:hidden border-t animate-fade-in"
-          style={{ borderColor: "oklch(0.38 0.09 195)", background: "oklch(0.22 0.08 195 / 0.98)" }}
-        >
-          <nav className="container py-4 flex flex-col gap-1">
-            {navLinks.map((link) => (
+        <div className="md:hidden border-t border-gray-200 bg-white">
+          <nav className="container py-4 flex flex-col gap-3">
+            {navLinks.map(({ label, href }) => (
               <button
-                key={link.href}
-                onClick={() => handleNavClick(link.href)}
-                className="text-left px-4 py-3 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors font-medium"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                key={label}
+                onClick={() => handleNavClick(href)}
+                className="text-left py-2 text-sm font-semibold transition-colors hover:text-blue-600"
+                style={{
+                  color: "oklch(0.38 0.09 195)",
+                  fontFamily: "'Space Grotesk', sans-serif",
+                }}
               >
-                {link.label}
+                {label}
               </button>
             ))}
             <button
-              onClick={() => handleNavClick("#contact")}
-              className="mt-2 px-5 py-3 rounded-lg text-sm font-semibold text-center btn-scale"
+              onClick={() => {
+                setOpen(false);
+                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="mt-2 px-6 py-2.5 rounded-lg font-bold text-sm w-full transition-all duration-200"
               style={{
                 background: "oklch(0.75 0.16 75)",
-                color: "oklch(0.12 0.005 285)",
+                color: "white",
                 fontFamily: "'Space Grotesk', sans-serif",
               }}
             >
