@@ -81,22 +81,7 @@ export default function ActivitiesSection() {
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="text-center">
-          <button
-            onClick={() => document.querySelector("#programs")?.scrollIntoView({ behavior: "smooth" })}
-            className="px-8 py-3.5 rounded-lg font-bold text-base transition-all duration-200 hover:brightness-110 inline-flex items-center gap-2"
-            style={{
-              background: "oklch(0.38 0.09 195)",
-              color: "white",
-              fontFamily: "'Space Grotesk', sans-serif",
-              boxShadow: "0 4px 20px oklch(0.38 0.09 195 / 0.3)",
-            }}
-          >
-            View All Activities
-            <ArrowRight size={18} />
-          </button>
-        </div>
+
       </div>
     </section>
   );

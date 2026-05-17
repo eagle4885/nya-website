@@ -328,9 +328,6 @@ export default function ContactSection() {
               <div className="flex flex-col gap-2">
                 {[
                   { label: "About", id: "about" },
-                  { label: "Leadership", id: "leadership" },
-                  { label: "Programs", id: "programs" },
-                  { label: "Focus Areas", id: "focus" },
                   { label: "Activities", id: "activities" },
                   { label: "Contact", id: "contact" },
                 ].map(({ label, id }) => (
