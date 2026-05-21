@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const HERO_IMAGES = [
-  "/manus-storage/extracted_image_14_e52559b5.png", // Team photo
+  "/manus-storage/WhatsAppImage2026-05-17at13.32.13_d280202e.jpeg", // Professional team photo
   "/manus-storage/extracted_image_2_759fd824.png",  // Community service
   "/manus-storage/extracted_image_3_43a49aae.png",  // Leadership
 ];

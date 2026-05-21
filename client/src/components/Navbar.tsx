@@ -85,6 +85,18 @@ export default function Navbar() {
           ))}
         </nav>
 
+        {/* Admin Link */}
+        <a
+          href="/admin"
+          className="hidden md:block px-4 py-2 text-sm font-semibold transition-colors hover:text-blue-600"
+          style={{
+            color: "oklch(0.38 0.09 195)",
+            fontFamily: "'Space Grotesk', sans-serif",
+          }}
+        >
+          Admin
+        </a>
+
         {/* CTA Button */}
         <button
           onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}

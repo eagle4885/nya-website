@@ -1,15 +1,22 @@
 {
   "build_command": "pnpm run build",
-  "capabilities": [],
+  "capabilities": [
+    "db",
+    "server",
+    "user"
+  ],
   "dev_command": "pnpm run dev",
-  "env_vars": {},
+  "env_vars": {
+    "DATABASE_URL": "mysql://2kDPSiHDUwwvcNy.root:gNf394wxV8Pjgz0T5uXU@gateway06.us-east-1.prod.aws.tidbcloud.com:4000/Wdk2VuHBktKtP2QqV63FoA?ssl={\"rejectUnauthorized\":true}",
+    "DRIZZLE_DATABASE_URL": "mysql://2kDPSiHDUwwvcNy.root:gNf394wxV8Pjgz0T5uXU@gateway06.us-east-1.prod.aws.tidbcloud.com:4000/Wdk2VuHBktKtP2QqV63FoA?ssl={\"rejectUnauthorized\":true}"
+  },
   "experiments": null,
   "git_remote": {
     "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663663725732/Wdk2VuHBktKtP2QqV63FoA",
-    "access_key_id": "ASIAZV3A2ECZAV3KIVZW",
-    "secret_access_key": "Wa2EwDB/9/K8qh+DicvElx1WO6s8sPGHnYr6pzTf",
-    "session_token": "IQoJb3JpZ2luX2VjELH//////////wEaCXVzLWVhc3QtMSJIMEYCIQDV8ttwg3K27S6+dscImvDdbiS2j3jXlJL8zzjo40kzSQIhAL9g3evfwmGya/JaZwpqsedn4HpJ1tGavAZC7d9X+e1JKvUDCHoQBBoMNjY1Mzg2MDk4ODY2Igxm2SsCMDoOCpvrSEkq0gNU+0DysYTqjne24MoiiWh2x0QfLiaU6VyKr7u1bHIPWV7CJow6jvJvdPBiWNfCpsEjRkJhpK6QnrVOiOdhsIQbKeShdn4MWtS3opobHIO7D7o8xuKv+9jadoBVrC9OXQSX1Ix8o6npFPVHc0Iq4Aix5Z83C++gLmsis3CyqnYGx0JWrBu9tfdZnir4sEK/5k/DOCvImP56jurSeYhotn/py/s27j1fi6R+Qqrzu7KujOXuiKNu4AorrYW6IIz2fjWg7dxkLVVDFzEQabSbs6WXDZqYWhs7PJcAY5CCaxxP6g7mNC6Qub5EX2lMz9Q+eT0wZV1oVHh3PAvua0M15qIOSDT97xnpm26S/0f6CDEdQ6zcXAftvLA08bfPNcp9EI/mdBbLkdUA4L/2ejkhY9hDm5/0cnXZrYA+0pja0epzooneaJDHntjFbejJaLz44H2s4lrhINTRVxemj1oFXUlpXLIW+YzvX+OpegT73Kk80clmA9MjHRRPJ4+kkQY3LGKam2TNrZP7QZlOuqdO39uUk2+hAXvv5RLGRC5uflLAY59eDkAmNE69fslgMMyvOu7W8zc0In29y2YaA/sSW8/q0mFcpmKHWi9RDu6dnECz4j+3MLqWndAGOpwBT5vzVndG/ivZ2MhQvk+rkZbjl92BrM4UB2TlU8EX5eaw4ZznExvwpXuUyGSVt1XTqkCj8dHCnSM5iN+DrjtLk8VyA2ves2fr/N8vXsS/CHsvHvGEPR8iEkr/atFZ9J2PLBfAZF/GI9ULuSwQ73li4otQYQh90/5vwdODEA2HLpiixqkCIvnvYzalVkxfLZdyC1iToc4q7m8R3CPl",
-    "expiration": "2026-05-16T04:35:06.000Z"
+    "access_key_id": "ASIAZV3A2ECZPKRTEQWB",
+    "secret_access_key": "nH5x63SrXa+lxyTzuSLXDprBOkiTbhm9DypnPSt5",
+    "session_token": "IQoJb3JpZ2luX2VjEAgaCXVzLWVhc3QtMSJIMEYCIQDShXS/FUfZVhqLyLWxoA2nrYVz2ZQpfPUDkoB1mIaQaQIhAJFBiWXv8GU6ScPC2KebvJMrEnm1Ga+qN21zrP6HuNZCKv4DCNH//////////wEQBBoMNjY1Mzg2MDk4ODY2IgwLpYrc7vci2ZXn7+0q0gPku50CrFelf2hJ/rW+Ku5SdWq/lNt3MnznjpRCteJisg1YEXJvvrqQbdRQiNAsdFkVY6mBmmjYh2tkNy7C0DZOjP2UXOgpWpVWttjAu/GH8a7RN8sL05HMd+PARaVYrt/z5yU5SVXT93oDBbpUrBHkRO7QQiOYDluQQXBQx7ftwKp3/FZIgRw9U6g93i5172+utt5U0WWiTt3ccvjclg7hOppAxctWPFaBVxmyhYpwwliMCvrib83uustrWKl3gOOLwrowwcxFDYhswuW0z5QbXCGMfEr3tGToGK28caoRifqaiwRj6lFNRbO64GwFsyX514PCJ0Bwfy4C8F9qMRbdB94FRrq3BD6oa1OP6scbkjXB6an7Gw4/BzRl65jetCU2r1LGyOqRvTTOIGhsS0Ykd57b/H6Mkti6tR7XlXmouIW7pq086Is/OdeToN9zL53EHFTgBcFaSAdx7co4YmNkNAlBDbz1ED6l7CT0SH8IaKxWHF4GxccmNmpEmdbJL/RWHXTJK8ntxk443N1mXnS/bunzAxyCnrO12yR6F+xqrWxF4O7JI6okd5QOpM/kBpxC8PJO/8gV0C5hgWtTtsWnt3zBET6GaD2C8ypkBRcf994KMI6wsNAGOpwBvrkf8q/r7qK1zyrq3q+SejvbpWwSMTJwBumFIElk5TR0kRthydBBF8FSxdvBlIHuPHpUQcOgwz835CxH+QW2/3BsD5b8GPUCQJ3wMw8aPQIfikrnbzXKxK10W9nnvRqIfXNPj3wtS/YviuXUAcmMvjoy1lTbZyvUiIcLy4gXUVxBp8N5pm1KFRFPKOINJHKWVYu3Ea3XALJxzmU2",
+    "expiration": "2026-05-19T19:58:06.000Z"
   },
   "name": "nya-website",
   "path": "/home/ubuntu/nya-website",
@@ -24,7 +31,7 @@
     "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
     "VITE_ANALYTICS_WEBSITE_ID": "5b8b8f82-6262-4f4e-b183-28d56e37bf9d",
     "VITE_APP_ID": "Wdk2VuHBktKtP2QqV63FoA",
-    "VITE_APP_LOGO": "",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663663725732/aCHSlqiSwIcCPzDa.png",
     "VITE_APP_TITLE": "Nandi Youth Assembly",
     "VITE_FRONTEND_FORGE_API_KEY": "XFVUhWP2ECk23Zf9Pqj7qR",
     "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
