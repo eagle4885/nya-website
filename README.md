@@ -1,160 +1,315 @@
-# Nandi Youth Assembly Website
+# Nandi Youth Assembly (NYA) Website
 
-A professional, modern website for the Nandi Youth Assembly (NYA) — a youth-centered platform for leadership, empowerment, and collective action in Nandi County, Kenya.
+A professional, modern, and fully-featured website for the Nandi Youth Assembly — empowering youth across Nandi County through leadership development, community service, and collective action.
 
 ## 🌐 Live Website
 
-**URL:** https://nandiyouthassembly.co.ke
+**Domain:** https://nandiyouthassembly.co.ke
 
-## 📋 Features
+## ✨ Features
 
-### Public Website
-- **Hero Carousel** — Rotating images showcasing the NYA team and activities
-- **About Section** — Vision, mission, and community information
-- **Leadership Team** — Profiles of NYA leadership members
-- **Activities Showcase** — Community service and leadership development programs
-- **Contact & Join** — Email contact form and social media links
-- **Responsive Design** — Works perfectly on desktop, tablet, and mobile devices
+### 🏠 Public Website
+- **Dynamic Homepage** with hero section and call-to-action
+- **About NYA** — Vision, mission, and organizational structure
+- **Leadership Profiles** — Meet the NYA team with detailed profiles
+- **Activities & Programs** — Showcase community initiatives and events
+- **News & Blog** — Latest updates and articles
+- **Member Directory** — Browse and connect with members
+- **Contact & Events** — Join forms, event calendar, contact methods
+- **Responsive Design** — Perfect on desktop, tablet, and mobile
 
-### Admin Dashboard
-- **Hero Image Management** — Upload, reorder, and manage carousel images
-- **Leadership Team Management** — Add, edit, and remove team member profiles
-- **Site Settings** — Update contact information and social media links
-- **Deployment Information** — Export and hosting options
+### 👨‍💼 Admin Dashboard
+- **Content Management** — Easy CRUD operations for all content
+- **Hero Image Management** — Upload and manage carousel images
+- **Team Management** — Add/edit/remove leadership profiles
+- **News Management** — Create and publish blog posts
+- **Event Management** — Create events and manage RSVPs
+- **Member Management** — View and manage registered members
+- **Site Settings** — Configure branding, contact info, and social links
+- **Analytics** — Track website usage and engagement
+- **User Permissions** — Role-based access control (Admin, Editor, Viewer)
 
-## 🚀 Quick Start
+## 🚀 Tech Stack
 
-### Accessing the Website
-1. Visit: https://nandiyouthassembly.co.ke
-2. Explore the homepage, learn about NYA, and join the movement
+### Frontend
+- **React 19** — Latest React with hooks and concurrent features
+- **TypeScript** — Type-safe development
+- **Vite** — Lightning-fast build tool and dev server
+- **Tailwind CSS 4** — Utility-first styling
+- **Framer Motion** — Smooth animations and transitions
+- **React Hook Form** — Efficient form handling
+- **Zod** — TypeScript-first schema validation
+- **Wouter** — Lightweight client-side routing
 
-### Accessing the Admin Dashboard
-1. Navigate to: https://nandiyouthassembly.co.ke/admin
-2. Manage website content and settings
+### Backend
+- **Node.js + Express** — Fast, minimalist web framework
+- **TypeScript** — Type safety for backend code
+- **MySQL/TiDB** — Relational database via Drizzle ORM
+- **JWT** — Secure authentication tokens
+- **Manus Platform** — Managed hosting with SSL, CDN, and auto-scaling
 
-## 📚 Documentation
+### Tools & Libraries
+- **Drizzle ORM** — Type-safe database queries
+- **Radix UI** — Unstyled, accessible components
+- **Lucide React** — Beautiful icon library
+- **Sonner** — Toast notifications
+- **clsx** — Utility for constructing className strings
 
-- **[ADMIN_GUIDE.md](./ADMIN_GUIDE.md)** — Complete guide to using the admin dashboard
-- **[DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)** — Instructions for exporting and deploying to external hosting
-
-## 🎨 Design
-
-The website features a professional, modern design with:
-- **Color Palette:** Deep teal (#1B6B7A) and vibrant amber (#D4A574)
-- **Typography:** Space Grotesk (headings) and Nunito (body text)
-- **Layout:** Clean, organized sections with smooth scrolling
-- **Images:** Professional photography from NYA events and activities
-
-## 📱 Responsive Design
-
-The website is fully responsive and optimized for:
-- Desktop computers (1920px and above)
-- Tablets (768px - 1024px)
-- Mobile phones (320px - 767px)
-
-## 🔧 Technology Stack
-
-- **Frontend:** React 19 + Tailwind CSS 4
-- **Build Tool:** Vite
-- **Hosting:** Manus (managed hosting with SSL, CDN, and auto-scaling)
-- **Database:** MySQL (for future content management features)
-
-## 📧 Contact Information
-
-**Email:** nandiyouthassembly@gmail.com  
-**Phone:** 0758 147 727  
-**Address:** NYA Head Office, Nandi Headquarters Building  
-P.O. Box 802-30300, Kapsabet  
-Nandi County, Kenya
-
-## 🤝 Social Media
-
-Follow NYA on social media:
-- Facebook
-- Twitter / X
-- Instagram
-- TikTok
-
-## 📝 Content
-
-The website includes information about:
-- **Vision:** To be a transformative platform empowering young people across Nandi County
-- **Mission:** To advocate, support, and inspire youth through education, mentorship, and leadership development
-- **Focus Areas:** 8 key thematic areas including education, health, environment, and economic empowerment
-- **Leadership:** 6-member leadership team with defined roles and responsibilities
-- **Activities:** Community service, mentorship programs, and leadership development initiatives
-
-## 🎯 Key Statistics
-
-- **Founded:** February 1, 2025
-- **Members:** 1000+
-- **Schools Targeted:** 60+
-- **Focus Areas:** 8
-- **Leadership Team:** 6 members
-
-## 🔐 Admin Access
-
-The admin dashboard is currently in preview mode. Full backend integration for content management is coming soon.
-
-**Features Coming Soon:**
-- Direct image uploads
-- Real-time team member management
-- Settings persistence
-- Content scheduling
-- Analytics and reporting
-
-## 📦 Project Structure
+## 📁 Project Structure
 
 ```
 nya-website/
-├── client/                 # Frontend React application
+├── client/                          # Frontend React application
 │   ├── src/
-│   │   ├── pages/         # Page components
-│   │   ├── components/    # Reusable UI components
-│   │   ├── App.tsx        # Main app routing
-│   │   └── index.css      # Global styles
-│   └── index.html         # HTML template
-├── drizzle/               # Database schema
-├── ADMIN_GUIDE.md         # Admin dashboard guide
-├── DEPLOYMENT_GUIDE.md    # Deployment instructions
-└── README.md              # This file
+│   │   ├── pages/                  # Page components
+│   │   │   ├── Home.tsx            # Homepage
+│   │   │   ├── AdminDashboard.tsx  # Admin panel
+│   │   │   ├── About.tsx           # About NYA
+│   │   │   ├── Leadership.tsx      # Leadership team
+│   │   │   ├── News.tsx            # News and blog
+│   │   │   ├── Events.tsx          # Events listing
+│   │   │   ├── Members.tsx         # Member directory
+│   │   │   ├── Contact.tsx         # Contact page
+│   │   │   ├── Login.tsx           # Authentication
+│   │   │   └── NotFound.tsx        # 404 page
+│   │   ├── components/             # Reusable components
+│   │   │   ├── Navbar.tsx          # Navigation bar
+│   │   │   ├── Footer.tsx          # Footer
+│   │   │   ├── HeroCarousel.tsx    # Hero image carousel
+│   │   │   ├── Card.tsx            # Card component
+│   │   │   ├── Button.tsx          # Button component
+│   │   │   ├── Modal.tsx           # Modal dialog
+│   │   │   ├── Form.tsx            # Form components
+│   │   │   └── ...                 # UI components
+│   │   ├── contexts/               # React contexts
+│   │   │   ├── AuthContext.tsx     # Authentication state
+│   │   │   ├── ThemeContext.tsx    # Theme management
+│   │   │   └── AdminContext.tsx    # Admin state
+│   │   ├── hooks/                  # Custom React hooks
+│   │   │   ├── useAuth.ts          # Auth hook
+│   │   │   ├── useForm.ts          # Form handling
+│   │   │   └── ...
+│   │   ├── lib/                    # Utility functions
+│   │   │   ├── api.ts             # API client
+│   │   │   ├── auth.ts            # Auth utilities
+│   │   │   └── utils.ts           # Helper functions
+│   │   ├── styles/                # Global styles
+│   │   │   ├── index.css          # Global CSS
+│   │   │   └── tailwind.css       # Tailwind config
+│   │   ├── App.tsx                # Main app component
+│   │   ├── main.tsx               # React entry point
+│   │   └── const.ts               # Constants
+│   ├── index.html                 # HTML template
+│   └── public/                    # Static assets
+├── server/                        # Backend (Express)
+│   ├── index.ts                   # Server entry point
+│   ├── routes/                    # API routes
+│   │   ├── auth.ts               # Auth endpoints
+│   │   ├── content.ts            # Content management
+│   │   ├── users.ts              # User management
+│   │   ├── events.ts             # Event management
+│   │   └── ...
+│   ├── middleware/                # Express middleware
+│   │   ├── auth.ts               # Authentication middleware
+│   │   └── error.ts              # Error handling
+│   └── db.ts                     # Database connection
+├── shared/                        # Shared types and utilities
+│   ├── types.ts                  # TypeScript types
+│   ├── const.ts                  # Shared constants
+│   └── schemas.ts                # Zod schemas
+├── drizzle/                       # Database migrations
+│   ├── schema.ts                 # Database schema
+│   └── migrations/               # Migration files
+├── vite.config.ts                # Vite configuration
+├── tsconfig.json                 # TypeScript config
+├── package.json                  # Dependencies
+├── pnpm-lock.yaml               # Lock file
+├── .env.example                 # Environment variables template
+├── README.md                    # This file
+├── ADMIN_GUIDE.md               # Admin documentation
+├── DEPLOYMENT_GUIDE.md          # Deployment instructions
+└── .project-config.json         # Manus platform config
 ```
 
-## 🚀 Deployment
+## 🎨 Design System
 
-### Current Hosting
-Your website is hosted on Manus, a managed hosting platform that includes:
-- Automatic SSL certificates
-- CDN for fast global delivery
-- Auto-scaling for traffic spikes
-- Automatic backups
-- 99.9% uptime guarantee
+### Color Palette
+- **Primary Teal:** `#1B6B7A` — Main brand color
+- **Secondary Amber:** `#D4A574` — Accent color
+- **Dark Gray:** `#2C3E50` — Text color
+- **Light Gray:** `#ECF0F1` — Background color
+- **Success Green:** `#27AE60`
+- **Error Red:** `#E74C3C`
+- **Warning Orange:** `#F39C12`
 
-### Export & Self-Host
-To deploy to your own hosting:
-1. Download your website from the Management UI
-2. Follow instructions in [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
-3. Deploy to Vercel, Netlify, GitHub Pages, or traditional hosting
+### Typography
+- **Headings:** Space Grotesk (600/700 weight)
+- **Body:** Nunito (400/500 weight)
+- **Code:** Fira Code (monospace)
 
-### Custom Domain
-To use your own domain:
-1. Go to Management UI → Settings → Domains
-2. Add your custom domain
-3. Follow DNS setup instructions
+### Spacing & Grid
+- Base spacing unit: 4px
+- Grid: 12-column responsive layout
+- Breakpoints: 320px, 768px, 1024px, 1440px
 
-## 📞 Support
+## 📋 Database Schema
 
-For questions or support:
-- Visit: https://help.manus.im
-- Email: support@manus.im
-- Contact NYA: nandiyouthassembly@gmail.com
+### Tables
+- **users** — User accounts and authentication
+- **members** — NYA member profiles
+- **leadership** — Leadership team members
+- **news** — Blog posts and articles
+- **events** — Events and activities
+- **hero_images** — Carousel images
+- **settings** — Site configuration
+- **audit_logs** — Activity tracking
 
-## 📄 License
+## 🔐 Authentication & Security
+
+- **JWT-based** authentication
+- **OAuth 2.0** integration with Manus OAuth
+- **Role-based Access Control** (RBAC)
+- **Password hashing** with bcrypt
+- **HTTPS/SSL** enforced
+- **CORS** properly configured
+- **Rate limiting** on API endpoints
+- **Input validation** with Zod
+
+## 🚀 Getting Started
+
+### Installation
+```bash
+# Clone repository
+git clone https://github.com/eagle4885/nya-website.git
+cd nya-website
+
+# Install dependencies
+pnpm install
+
+# Setup environment variables
+cp .env.example .env.local
+```
+
+### Development
+```bash
+# Start dev server (runs on localhost:3000)
+pnpm run dev
+
+# Open in browser
+# Frontend: http://localhost:3000
+# Admin: http://localhost:3000/admin
+```
+
+### Building
+```bash
+# Build for production
+pnpm run build
+
+# Preview production build
+pnpm run preview
+
+# Check TypeScript
+pnpm run check
+```
+
+## 📚 Documentation
+
+- **[ADMIN_GUIDE.md](./ADMIN_GUIDE.md)** — Complete admin dashboard guide
+- **[DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)** — Deployment to production
+- **[API_DOCUMENTATION.md](./API_DOCUMENTATION.md)** — API endpoints reference
+- **[CONTRIBUTING.md](./CONTRIBUTING.md)** — Contribution guidelines
+
+## 🌍 Environment Variables
+
+```env
+# Frontend
+VITE_APP_ID=your_app_id
+VITE_APP_TITLE=Nandi Youth Assembly
+VITE_APP_LOGO=https://...
+VITE_OAUTH_PORTAL_URL=https://manus.im
+VITE_FRONTEND_FORGE_API_URL=https://forge.manus.ai
+VITE_FRONTEND_FORGE_API_KEY=your_key
+VITE_ANALYTICS_ENDPOINT=https://manus-analytics.com
+VITE_ANALYTICS_WEBSITE_ID=your_id
+
+# Backend
+DATABASE_URL=mysql://user:pass@host:port/db
+JWT_SECRET=your_secret_key
+NODE_ENV=production
+PORT=3000
+
+# Manus Platform
+BUILT_IN_FORGE_API_URL=https://forge.manus.ai
+BUILT_IN_FORGE_API_KEY=your_key
+OAUTH_SERVER_URL=https://api.manus.im
+```
+
+## 📞 API Endpoints
+
+### Public
+- `GET /api/news` — Get all news articles
+- `GET /api/news/:id` — Get single article
+- `GET /api/events` — Get upcoming events
+- `GET /api/events/:id` — Get event details
+- `GET /api/leadership` — Get leadership team
+- `GET /api/members` — Get member directory
+- `POST /api/contact` — Submit contact form
+- `POST /api/members/register` — Register as member
+
+### Authenticated
+- `POST /api/auth/login` — User login
+- `POST /api/auth/logout` — User logout
+- `GET /api/auth/me` — Get current user
+- `POST /api/auth/refresh` — Refresh token
+
+### Admin Only
+- `POST /api/admin/news` — Create article
+- `PUT /api/admin/news/:id` — Update article
+- `DELETE /api/admin/news/:id` — Delete article
+- `POST /api/admin/events` — Create event
+- `PUT /api/admin/events/:id` — Update event
+- `DELETE /api/admin/events/:id` — Delete event
+- `POST /api/admin/leadership` — Add team member
+- `PUT /api/admin/leadership/:id` — Update member
+- `DELETE /api/admin/leadership/:id` — Remove member
+- `POST /api/admin/settings` — Update site settings
+- `GET /api/admin/analytics` — View analytics
+
+## 🎯 Roadmap
+
+### Phase 1 (Current) ✅
+- [x] Homepage with hero section
+- [x] About page
+- [x] Leadership profiles
+- [x] Contact form
+- [x] Responsive design
+- [x] Basic admin dashboard
+
+### Phase 2 (Next)
+- [ ] News/Blog system
+- [ ] Event management
+- [ ] Member registration
+- [ ] Email notifications
+- [ ] Image optimization
+
+### Phase 3 (Future)
+- [ ] Advanced analytics
+- [ ] Social media integration
+- [ ] Mobile app
+- [ ] Donation system
+- [ ] Volunteer platform
+
+## 🤝 Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+## 📝 License
 
 © 2025 Nandi Youth Assembly. All rights reserved.
 
 ---
 
-**Website Version:** 0baa050c  
+**Project Status:** 🚀 Active Development  
 **Last Updated:** May 24, 2026  
-**Status:** Live and Active
+**Version:** 1.0.0-alpha  
+**Maintainer:** [@eagle4885](https://github.com/eagle4885)
