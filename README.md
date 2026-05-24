@@ -4,7 +4,7 @@ A professional, modern website for the Nandi Youth Assembly (NYA) — a youth-ce
 
 ## 🌐 Live Website
 
-**URL:** https://nyassembly-wdk2vuhb.manus.space
+**URL:** https://nandiyouthassembly.co.ke
 
 ## 📋 Features
 
@@ -25,11 +25,11 @@ A professional, modern website for the Nandi Youth Assembly (NYA) — a youth-ce
 ## 🚀 Quick Start
 
 ### Accessing the Website
-1. Visit: https://nyassembly-wdk2vuhb.manus.space
+1. Visit: https://nandiyouthassembly.co.ke
 2. Explore the homepage, learn about NYA, and join the movement
 
 ### Accessing the Admin Dashboard
-1. Navigate to: https://nyassembly-wdk2vuhb.manus.space/admin
+1. Navigate to: https://nandiyouthassembly.co.ke/admin
 2. Manage website content and settings
 
 ## 📚 Documentation
@@ -156,5 +156,5 @@ For questions or support:
 ---
 
 **Website Version:** 0baa050c  
-**Last Updated:** May 21, 2026  
+**Last Updated:** May 24, 2026  
 **Status:** Live and Active
