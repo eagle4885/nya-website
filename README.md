@@ -4,7 +4,8 @@ A professional, modern, and fully-featured website for the Nandi Youth Assembly 
 
 ## 🌐 Live Website
 
-**Domain:** https://nandiyouthassembly.co.ke
+**Domain:** https://nandiyouthassembly.co.ke  
+**Hosted on:** GitHub Pages
 
 ## ✨ Features
 
@@ -46,7 +47,12 @@ A professional, modern, and fully-featured website for the Nandi Youth Assembly 
 - **TypeScript** — Type safety for backend code
 - **MySQL/TiDB** — Relational database via Drizzle ORM
 - **JWT** — Secure authentication tokens
-- **Manus Platform** — Managed hosting with SSL, CDN, and auto-scaling
+
+### Hosting & Deployment
+- **GitHub Pages** — Fast, reliable, free hosting
+- **GitHub Actions** — Automated CI/CD pipeline
+- **Custom Domain** — nandiyouthassembly.co.ke
+- **SSL/TLS** — Automatic HTTPS via GitHub Pages
 
 ### Tools & Libraries
 - **Drizzle ORM** — Type-safe database queries
@@ -59,6 +65,10 @@ A professional, modern, and fully-featured website for the Nandi Youth Assembly 
 
 ```
 nya-website/
+├── .github/
+│   ├── workflows/                   # GitHub Actions workflows
+│   │   ├── deploy.yml              # Deploy to GitHub Pages
+│   │   └── tests.yml               # Run tests on push
 ├── client/                          # Frontend React application
 │   ├── src/
 │   │   ├── pages/                  # Page components
@@ -128,7 +138,9 @@ nya-website/
 ├── README.md                    # This file
 ├── ADMIN_GUIDE.md               # Admin documentation
 ├── DEPLOYMENT_GUIDE.md          # Deployment instructions
-└── .project-config.json         # Manus platform config
+├── API_DOCUMENTATION.md         # API reference
+├── CONTRIBUTING.md              # Contributing guidelines
+└── .gitignore                   # Git ignore rules
 ```
 
 ## 🎨 Design System
@@ -167,10 +179,10 @@ nya-website/
 ## 🔐 Authentication & Security
 
 - **JWT-based** authentication
-- **OAuth 2.0** integration with Manus OAuth
+- **OAuth 2.0** integration (optional)
 - **Role-based Access Control** (RBAC)
 - **Password hashing** with bcrypt
-- **HTTPS/SSL** enforced
+- **HTTPS/SSL** enforced (GitHub Pages provides automatic HTTPS)
 - **CORS** properly configured
 - **Rate limiting** on API endpoints
 - **Input validation** with Zod
@@ -226,10 +238,9 @@ pnpm run check
 VITE_APP_ID=your_app_id
 VITE_APP_TITLE=Nandi Youth Assembly
 VITE_APP_LOGO=https://...
-VITE_OAUTH_PORTAL_URL=https://manus.im
-VITE_FRONTEND_FORGE_API_URL=https://forge.manus.ai
-VITE_FRONTEND_FORGE_API_KEY=your_key
-VITE_ANALYTICS_ENDPOINT=https://manus-analytics.com
+VITE_OAUTH_PORTAL_URL=https://your-oauth-provider.com
+VITE_FRONTEND_API_URL=https://api.nandiyouthassembly.co.ke
+VITE_ANALYTICS_ENDPOINT=https://analytics.example.com
 VITE_ANALYTICS_WEBSITE_ID=your_id
 
 # Backend
@@ -238,10 +249,8 @@ JWT_SECRET=your_secret_key
 NODE_ENV=production
 PORT=3000
 
-# Manus Platform
-BUILT_IN_FORGE_API_URL=https://forge.manus.ai
-BUILT_IN_FORGE_API_KEY=your_key
-OAUTH_SERVER_URL=https://api.manus.im
+# GitHub Pages
+GITHUB_PAGES_URL=https://nandiyouthassembly.co.ke
 ```
 
 ## 📞 API Endpoints
@@ -275,6 +284,63 @@ OAUTH_SERVER_URL=https://api.manus.im
 - `POST /api/admin/settings` — Update site settings
 - `GET /api/admin/analytics` — View analytics
 
+## 🚀 Deployment on GitHub Pages
+
+### Setup GitHub Pages with Custom Domain
+
+1. **Enable GitHub Pages:**
+   - Go to repository Settings
+   - Navigate to Pages section
+   - Select "Deploy from a branch"
+   - Choose `main` branch and `/root` folder
+
+2. **Configure Custom Domain:**
+   - In Pages settings, enter: `nandiyouthassembly.co.ke`
+   - GitHub creates CNAME file automatically
+
+3. **Update DNS Records at Registrar:**
+   ```
+   Type: A
+   Name: @
+   Points to: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+   
+   Or use CNAME (alternative):
+   Type: CNAME
+   Name: www
+   Points to: eagle4885.github.io
+   ```
+
+4. **Wait for DNS Propagation:**
+   - DNS changes can take 24-48 hours
+   - Verify with: `nslookup nandiyouthassembly.co.ke`
+
+5. **Enable HTTPS:**
+   - GitHub Pages automatically enables HTTPS
+   - Check "Enforce HTTPS" in Pages settings
+
+### Automated Deployment
+
+GitHub Actions automatically deploys on every push to `main`:
+
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: pnpm install && pnpm run build
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+```
+
 ## 🎯 Roadmap
 
 ### Phase 1 (Current) ✅
@@ -284,6 +350,8 @@ OAUTH_SERVER_URL=https://api.manus.im
 - [x] Contact form
 - [x] Responsive design
 - [x] Basic admin dashboard
+- [x] GitHub Pages hosting setup
+- [x] Custom domain configuration
 
 ### Phase 2 (Next)
 - [ ] News/Blog system
@@ -310,6 +378,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for gu
 ---
 
 **Project Status:** 🚀 Active Development  
+**Hosting:** GitHub Pages + Custom Domain (.co.ke)  
 **Last Updated:** May 24, 2026  
 **Version:** 1.0.0-alpha  
 **Maintainer:** [@eagle4885](https://github.com/eagle4885)
