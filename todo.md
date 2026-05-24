@@ -14,6 +14,7 @@
 - [x] Build leadership team management interface
 - [x] Build site settings management interface
 - [x] Create comprehensive admin user guide (ADMIN_GUIDE.md)
+- [x] Remove leadership profile section from public website
 
 ## Phase 3: Deployment & Documentation
 - [x] Set up domain: nyassembly-wdk2vuhb.manus.space

@@ -5,7 +5,7 @@
 import Navbar from "@/components/Navbar";
 import HeroCarousel from "@/components/HeroCarousel";
 import AboutSection from "@/components/AboutSection";
-import LeadershipProfiles from "@/components/LeadershipProfiles";
+
 import ActivitiesSection from "@/components/ActivitiesSection";
 import CallToAction from "@/components/CallToAction";
 import ContactSection from "@/components/ContactSection";
@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <HeroCarousel />
       <AboutSection />
-      <LeadershipProfiles />
+
       <ActivitiesSection />
       <CallToAction />
       <ContactSection />
